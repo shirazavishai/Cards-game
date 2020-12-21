@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".activities.GameActivity">
+
+    <ImageView
+        android:id="@+id/game_BTN_play"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/play"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="start game" />
+
+    <TextView
+        android:id="@+id/game_LBL_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Zoo War"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        />
+
+    <ImageView
+        android:id="@+id/game_IMG_pandaCard"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="110dp"
+        android:layout_alignEnd="@id/game_BTN_play"
+        android:contentDescription="panda cards" />
+
+    <ImageView
+        android:id="@+id/game_IMG_lionCard"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="110dp"
+        android:layout_alignStart="@id/game_BTN_play"
+        android:contentDescription="lion cards" />
+
+    <ImageView
+        android:id="@+id/game_IMG_lion"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/lion"
+        android:layout_alignStart="@id/game_IMG_lionCard"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="150dp"
+        android:contentDescription="image" />
+
+    <ImageView
+        android:id="@+id/game_IMG_panda"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/panda"
+        android:layout_alignEnd="@id/game_IMG_pandaCard"
+        android:layout_marginEnd="220dp"
+        android:layout_marginTop="150dp"
+        android:contentDescription="image" />
+
+    <TextView
+        android:id="@+id/game_LBL_scoreLion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_alignStart="@id/game_IMG_lion"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="70sp"
+        />
+
+    <TextView
+        android:id="@+id/game_LBL_scorePanda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_alignStart="@id/game_IMG_panda"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="70sp"
+        />
+
+    <ProgressBar
+        android:id="@+id/game_PRG_pBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/game_LBL_title"
+        android:layout_centerHorizontal="true"
+        android:minHeight="50dp"
+        android:minWidth="250dp"
+        android:max="26"
+        android:indeterminate="false"
+        android:progress="0"
+        />
+
+</RelativeLayout>

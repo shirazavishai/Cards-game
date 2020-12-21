@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hw_02">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <application
+        android:name=".activities.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/zoo_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/zoo_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HW_02">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/API_key"/>
+
+        <activity
+            android:name=".activities.TopTenActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.GameActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".activities.MenuActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
